@@ -1312,7 +1312,7 @@ body {
     width: 525px;
     height: 525px;
     perspective: 2600px;
-    transform: scale(0.7) translateY(-40%); /* Adjust this value to move it up */
+    transform: scale(0.7) translateY(-50%); /* Adjust this value to move it up */
     position: absolute;
     left: 610px;
     z-index: 4;
@@ -1320,9 +1320,9 @@ body {
 .frame {
       position: absolute;
       width: 600px; /* or whatever size fits */
-      height: 800px; /* Increase this to give more height */
+      height: 1000px; /* Increase this to give more height */
       left: calc(50% - 500px);
-      top: calc(50% - 250px); /* Adjust this so it's positioned higher */
+      top: calc(50% - 500px); /* Adjust this so it's positioned higher */
       border-radius: 2px;
       overflow: hidden;
       z-index: 8;
@@ -1332,13 +1332,11 @@ body {
       height: auto;
       transform: translate(-50%, -50%) scale(0.7);
 }
-
 /* Rescale the fairy and its animation */
 .fairy-container {
         transform: scale(0.6);
         animation: move-mobile 12s ease-in-out infinite;
 }
-
 /* Adjust fairy movement area */
 @keyframes move-mobile {
         0%, 100% {
