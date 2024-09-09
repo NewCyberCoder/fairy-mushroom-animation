@@ -1308,58 +1308,62 @@ body {
 /* For MOBILE */
 /* General Layout Adjustments for Mobile */
 @media screen and (max-width: 600px) {
-    .mushroom-scene {
-        transform: scale(0.5) translateY(10%);
-        position: absolute;
-        left: calc(50% - 150px);
-        z-index: 4;
-    }
-    
-    .frame {
-        width: 90vw;
-        height: auto;
-        left: calc(50% - 150px);
-        top: calc(50% - 150px);
-    }
-
-    .fairy-container {
+  .mushroom-scene {
+    width: 525px;
+    height: 525px;
+    perspective: 2600px;
+    transform: scale(0.7) translateY(-40%); /* Adjust this value to move it up */
+    position: absolute;
+    left: 610px;
+    z-index: 4;
+}  
+.frame {
+      position: absolute;
+      width: 600px; /* or whatever size fits */
+      height: 800px; /* Increase this to give more height */
+      left: calc(50% - 500px);
+      top: calc(50% - 250px); /* Adjust this so it's positioned higher */
+      border-radius: 2px;
+      overflow: hidden;
+      z-index: 8;
+}  
+.fairy-container {
       width: 80%;
       height: auto;
       transform: translate(-50%, -50%) scale(0.7);
-    }
+}
 
-    /* Rescale the fairy and its animation */
-    .fairy-container {
+/* Rescale the fairy and its animation */
+.fairy-container {
         transform: scale(0.6);
         animation: move-mobile 12s ease-in-out infinite;
-    }
+}
 
-    /* Adjust fairy movement area */
-    @keyframes move-mobile {
+/* Adjust fairy movement area */
+@keyframes move-mobile {
         0%, 100% {
             transform: translate(40px, 40px);
         }
         50% {
             transform: translate(-40px, -40px);;
         }
-    }
+}
+/* Adjust star placements */
+.star:nth-child(1) { top: 5%; left: 50%; }
+.star:nth-child(2) { top: 10%; left: 40%; }
+.star:nth-child(3) { top: 15%; left: 60%; }
+.star:nth-child(4) { top: 20%; left: 30%; }
+.star:nth-child(5) { top: 25%; left: 70%; }
+.star:nth-child(6) { top: 30%; left: 40%; }
+.star:nth-child(7) { top: 35%; left: 50%; }
+.star:nth-child(8) { top: 40%; left: 20%; }
+.star:nth-child(9) { top: 45%; left: 60%; }
+.star:nth-child(10) { top: 50%; left: 30%; }
 
-    /* Adjust star placements */
-    .star:nth-child(1) { top: 5%; left: 50%; }
-    .star:nth-child(2) { top: 10%; left: 40%; }
-    .star:nth-child(3) { top: 15%; left: 60%; }
-    .star:nth-child(4) { top: 20%; left: 30%; }
-    .star:nth-child(5) { top: 25%; left: 70%; }
-    .star:nth-child(6) { top: 30%; left: 40%; }
-    .star:nth-child(7) { top: 35%; left: 50%; }
-    .star:nth-child(8) { top: 40%; left: 20%; }
-    .star:nth-child(9) { top: 45%; left: 60%; }
-    .star:nth-child(10) { top: 50%; left: 30%; }
-
-    /* Adjust grass positions for smaller screen */
-    .grass-blade-1 { bottom: 50px; left: 5%; }
-    .grass-blade-2 { bottom: 30px; left: 10%; }
-    .grass-blade-3 { bottom: 70px; left: 50%; }
-    .grass-blade-4 { bottom: 80px; left: 60%; }
-    .grass-blade-5 { bottom: 90px; left: 70%; }
+/* Adjust grass positions for smaller screen */
+.grass-blade-1 { bottom: 50px; left: 5%; }
+.grass-blade-2 { bottom: 30px; left: 10%; }
+.grass-blade-3 { bottom: 70px; left: 50%; }
+.grass-blade-4 { bottom: 80px; left: 60%; }
+.grass-blade-5 { bottom: 90px; left: 70%; }
 }
