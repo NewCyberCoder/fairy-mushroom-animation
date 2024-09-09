@@ -1312,7 +1312,7 @@ body {
     width: 525px;
     height: 525px;
     perspective: 2600px;
-    transform: scale(0.7) translateY(-50%); /* Adjust this value to move it up */
+    transform: scale(0.7) translateY(-30%); /* Adjust this value to move it up */
     position: absolute;
     left: 610px;
     z-index: 4;
@@ -1329,6 +1329,7 @@ body {
 }  
 .fairy-container {
       width: 80%;
+      top: -50px;
       height: auto;
       transform: translate(-50%, -50%) scale(0.7);
 }
