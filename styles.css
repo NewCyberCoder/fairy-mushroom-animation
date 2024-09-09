@@ -1308,51 +1308,42 @@ body {
 /* For MOBILE */
 /* General Layout Adjustments for Mobile */
 @media screen and (max-width: 600px) {
-  .grass-area {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 100px;
-    z-index: 1;
-  }
-  .mushroom-scene {
+body, html {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+.mushroom-scene {
     width: 525px;
     height: 525px;
     perspective: 2600px;
-    transform: scale(0.7) translateY(-30%); /* Adjust this value to move it up */
+    transform: scale(0.7) translateY(-40%); /* Adjust this value to move it up */
     position: absolute;
-    left: 610px;
+    left: 50%; /* Centered horizontally */
+    transform: translateX(-50%); /* Adjust */
     z-index: 4;
-}  
-.frame {
-      position: absolute;
-      width: 600px; /* or whatever size fits */
-      height: 1000px; /* Increase this to give more height */
-      left: calc(50% - 500px);
-      top: calc(50% - 500px); /* Adjust this so it's positioned higher */
-      border-radius: 2px;
-      overflow: hidden;
-      z-index: 8;
-}  
-.fairy-container {
-      width: 80%;
-      top: -50px;
-      height: auto;
-      transform: translate(-50%, -50%) scale(0.7);
 }
+.frame {
+    position: absolute;
+    width: 600px; /* or whatever size fits */
+    height: 1000px; /* Increase this to give more height */
+    left: calc(50% - 500px);
+    top: calc(50% - 500px); /* Adjust this so it's positioned higher */
+    border-radius: 2px;
+    overflow: hidden;
+    z-index: 8;
+}  
 /* Rescale the fairy and its animation */
 .fairy-container {
-        transform: scale(0.6);
-        animation: move-mobile 12s ease-in-out infinite;
+    transform: scale(0.6);
+    animation: move-mobile 12s ease-in-out infinite;
 }
 /* Adjust fairy movement area */
 @keyframes move-mobile {
-        0%, 100% {
-            transform: translate(40px, 40px);
-        }
-        50% {
-            transform: translate(-40px, -40px);;
-        }
+    0%, 100% {
+      transform: translate(40px, 40px); /* Keep the translation small to prevent clipping */
+    }
+    50% {
+      transform: translate(-40px, -40px);;
+    }
 }
 /* Adjust star placements */
 .star:nth-child(1) { top: 5%; left: 50%; }
@@ -1365,26 +1356,17 @@ body {
 .star:nth-child(8) { top: 40%; left: 20%; }
 .star:nth-child(9) { top: 45%; left: 60%; }
 .star:nth-child(10) { top: 50%; left: 30%; }
-
 /* Adjust grass positions for smaller screen */
-.grass-blade-1 {
-  bottom: 50px;
-  left: 5%;
+.grass-area {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px; /* Adjust height for mobile */
+    z-index: 1;
 }
-.grass-blade-2 {
-  bottom: 30px;
-  left: 10%;
-}
-.grass-blade-3 {
-  bottom: 70px;
-  left: 50%;
-}
-.grass-blade-4 {
-  bottom: 80px;
-  left: 60%;
-}
-.grass-blade-5 {
-  bottom: 90px;
-  left: 70%;
-}
+.grass-blade-1 { bottom: 50px; left: 5%; }
+.grass-blade-2 { bottom: 30px; left: 10%; }
+.grass-blade-3 { bottom: 70px; left: 50%; }
+.grass-blade-4 { bottom: 80px; left: 60%; }
+.grass-blade-5 { bottom: 90px; left: 70%; }
 }
